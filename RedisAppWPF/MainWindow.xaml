@@ -1,0 +1,46 @@
+﻿<Window x:Class="RedisAppWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RedisAppWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="541.803" Width="749.226" Loaded="Window_Loaded">
+    <Grid Margin="0,0,-0.333,11.667">
+        <Label Content="Key" HorizontalAlignment="Left" VerticalAlignment="Top" TextOptions.TextHintingMode="Fixed"/>
+        <Label Content="Data To Store" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0"/>
+        <TextBox x:Name="txtKeyToStore" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="580" Margin="122,0,0,0"/>
+        <TextBox x:Name="txtDataToStore" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="580" Margin="122,34,0,0"/>
+        <Button x:Name="cmdIncrTest" Content="Incr Test" HorizontalAlignment="Left" Height="32" Margin="127,118,0,0" VerticalAlignment="Top" Width="99" Click="cmdIncrTest_Click"/>
+        <Button x:Name="cmdDeleteItemByKey" Content="Del Item By Key" HorizontalAlignment="Left" Height="32" Margin="492,117,0,0" VerticalAlignment="Top" Width="99" Click="cmdDeleteItemByKey_Click"/>
+        <Button x:Name="cmdCacheToRedis" Content="Cache To Redis
+                " HorizontalAlignment="Left" Height="32" Margin="603,117,0,0" VerticalAlignment="Top" Width="99" Click="cmdCacheToRedis_Click"/>
+        <Label Content="Channel" HorizontalAlignment="Left" VerticalAlignment="Top" TextOptions.TextHintingMode="Fixed" Margin="0,197,0,0"/>
+        <Label Content="Message To Send" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,227,0,0"/>
+        <TextBox x:Name="txtChannel" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="CIM.FABWORKS.REDIS_SRV" VerticalAlignment="Top" Width="580" Margin="122,197,0,0"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="580" Margin="122,231,0,0"/>
+        <StatusBar x:Name="stsStatus" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="733" RenderTransformOrigin="1.686,3.188" Margin="0,463,0,0">
+            <TabItem/>
+        </StatusBar>
+        <ListView x:Name="lstMessage" HorizontalAlignment="Left" Height="145" Margin="10,313,0,0" VerticalAlignment="Top" Width="723">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="cmdSubscribe" Content="Subscribe" HorizontalAlignment="Left" Height="32" Margin="456,262,0,0" VerticalAlignment="Top" Width="99" Click="cmdSubscribe_Click"/>
+        <Button x:Name="cmdPublish" Content="Publish" HorizontalAlignment="Left" Height="32" Margin="603,262,0,0" VerticalAlignment="Top" Width="99" Click="cmdPublish_Click"/>
+        <Label Content="Time To Live" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,58,0,0"/>
+        <TextBox x:Name="txtExpireTime" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="580" Margin="122,62,0,0"/>
+        <Button x:Name="cmdSetExpireTime" Content="SetExpireTime" HorizontalAlignment="Left" Height="32" Margin="363,117,0,0" VerticalAlignment="Top" Width="120" Click="cmdSetExpireTime_Click"/>
+        <Button x:Name="cmdShowTTL" Content="ShowTTL" HorizontalAlignment="Left" Height="32" Margin="235,117,0,0" VerticalAlignment="Top" Width="120" Click="cmdShowTTL_Click"/>
+        <Button x:Name="cmdAddToSet" Content="Add To Set" HorizontalAlignment="Left" Height="38" Margin="492,154,0,0" VerticalAlignment="Top" Width="99" Click="cmdAddToSet_Click"/>
+        <Button x:Name="cmdDumpSet" Content="Dump Set" HorizontalAlignment="Left" Height="38" Margin="603,159,0,0" VerticalAlignment="Top" Width="99" Click="cmdDumpSet_Click"/>
+        <Button x:Name="cmdJsonTest" Content="Json Test" HorizontalAlignment="Left" Height="38" Margin="361,159,0,0" VerticalAlignment="Top" Width="120" Click="cmdJsonTest_Click"/>
+        <Button x:Name="cmdTransactionTest" Content="Transaction Test" HorizontalAlignment="Left" Height="33" Margin="231,159,0,0" VerticalAlignment="Top" Width="120" Click="cmdTransactionTest_Click"/>
+        <Button x:Name="cmdGetByKey" Content="GeyValueByKey" HorizontalAlignment="Left" Height="33" Margin="125,159,0,0" VerticalAlignment="Top" Width="99" Click="cmdGetByKey_Click"/>
+        <Button x:Name="cmdIncrStressTest" Content="IncrStressTest" HorizontalAlignment="Left" Height="33" Margin="10,117,0,0" VerticalAlignment="Top" Width="112" Click="cmdIncrStressTest_Click"/>
+
+    </Grid>
+</Window>
